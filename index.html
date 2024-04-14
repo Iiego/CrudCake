@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
+0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <form id="myForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" class="nomebolo" name="name" placeholder="Nome do bolo" />
+
+    <label for="ingredientes">Ingredientes:</label>
+    <textarea type="text" id="ingredientes" name="ingredientes" placeholder="Informe os ingredientes"></textarea>
+
+
+    <label for="preparo">Modo de preparo:</label>
+    <textarea type="text" id="preparo" class="" name="descricao" placeholder="Informe o modo de preparo"></textarea>
+
+    <button type="button" id="salvar" class="btnsalvar" onclick="saveData()">Salvar</button>
+    
+    <span class="error">Por favor, preencha todos os campos antes de salvar.</span>
+  </form>
+
+  <div id="userList"></div>
+
+  <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Nome:</p>
+          <input type="text" id="editName" class="editName" placeholder="Nome">
+          <p>Ingredientes:</p>
+          <textarea type="text"  id="editIngredientes" placeholder="Ingredientes"></textarea>
+          <p>Preparo:</p>
+          <textarea type="text" id="editPreparo" placeholder="Preparo"></textarea>
+          <button id="saveEditButton">Salvar Edição</button>
+          <button class="cancelButton">Cancelar Edição</button>
+
+          <span class="error-modal"><br />Por favor, preencha todos os campos antes de salvar.</span>
+        </div>
+  </div>
+  
+  <script src="script.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    display: flex;
+}
+
+
+
+form{
+    display: flex;
+    width: 45%;
+    height: 30%;
+    flex-direction: column;
+    border: 3px solid blue ;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+
+form input{
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+}
+.nomebolo{
+    width: 100%;
+    height: 10%;
+    
+}
+textarea{
+    border-radius: 3px;
+    resize: none;
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+form label{
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+
+.btnsalvar{
+    font-size: 20px;
+    width: 35%;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+
+}
+.btnsalvar:active{
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.16);
+}
+
+.error{
+    display:none
+
+}
+
+#editButton, #deleteButton{
+    white-space: nowrap;
+    margin-right: 20px;
+
+}
+
+#userList{
+    width: 55%;
+    margin-top: 25px;
+}
+.user-container{
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 7px;
+    border: 3px solid blue;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.header-accordion{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+h1{
+    font-size: 20px;
+    margin: 10px;
+    max-width: 70%;
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+    overflow: hidden; /* Oculta o texto que ultrapassa */
+    text-overflow: ellipsis;
+}
+.header-button{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.header-button button{
+    margin-right: 10px;
+}
+.Abrir{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: aqua;
+    cursor: pointer;
+    
+}
+.Editar{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: gold;
+    cursor: pointer;
+}
+.Deletar{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: red;
+    cursor: pointer;
+}
+.accordion{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 0;
+    transition: height 0.3s ease-out;
+    overflow: hidden;
+}
+.accordion.active{
+    margin: 10px;
+    height: 150px;
+    
+}
+
+
+.accordion p{
+    border: 1px solid blue;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Oculta por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%;
+  }
+  .modal-content .input-modal {
+    width: 100%;
+
+  }
+
+  .modal-content .editName{
+    font-size: 20px;
+  }
+  .modal-content span{
+    margin-left: auto ;
+  }
+  .modal-content button{
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 10px auto 0px auto;
+    color: white;
+    cursor: pointer;
+  }
+  .error-modal{
+    display: none;
+  }
+  
+  #saveEditButton{
+    width: 30%;
+    background-color: green;
+    
+  }
+
+  .cancelButton{
+    width: 40%;
+    background-color: red;
+  }
+  /* Estilos para o botão de fechar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
